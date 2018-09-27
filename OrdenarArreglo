@@ -1,0 +1,26 @@
+#include <iostream>
+int irri[5]={8,4,3,6,7};
+using namespace std;
+void ordenaarreglo();
+int main()
+{
+ordenaarreglo();
+return 0;
+}
+void ordenaarreglo()
+{
+    int n=0;
+    int *array=&irri[0];
+    for(int i=0; i<5; i++){
+
+        for(int j=i+1; j<5; j++){
+
+        if(*(array+i) > *(array+j)){
+               n=*(array+i);
+               *(array+i)=*(array+j);
+               *(array+j)=n;
+            }
+        }
+        cout<<irri[i]<<"\n";
+    }
+}
