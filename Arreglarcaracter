@@ -1,37 +1,29 @@
 #include <iostream>
 char unacadena[] = "Lenguajes de Programacion ITM";
 char otracadena[] = "ITM";
-int buscaString();
+int buscaString(char *bigarray,char *smallarray);
 using namespace std;
 
 int main()
 {
-    buscaString();
+    buscaString(unacadena, otracadena);
     return 0;
 }
 
-int buscaString()
+int buscaString(char *bigarray,char *smallarray)
 {
-    char *bigarray;
-    char* smallarray;
-    int cont=0;
-    bigarray = &unacadena[0];
-    smallarray = &otracadena[0];
-
-    for(int i = 0; i < sizeof(unacadena); i++){
-       if(*(bigarray + i) == *(smallarray)){
-            cont++;
-          for(int j=0; j<sizeof(otracadena); j++){
-              if(*(bigarray + i + j) == *(smallarray + j)){
-                cont++;
-               }
-              if(cont==sizeof(otracadena)){
-                  cout<<"Una maravilla"<<"\n";
-                  cont = 0;
-              }
-          }
-
-          cont=0;
-       }
-   }
+    for(int i=0; i < sizeof(unacadena); i++)
+    {
+        if(*(bigarray+i)==*(smallarray))
+        {
+            if(*(bigarray+i+1)==*(smallarray+1))
+            {
+                if(*(bigarray+i+2)==*(smallarray+2))
+                {
+                    std::cout << "Una maravilla" << std::endl;
+                    return 0;
+                }
+            }
+        }    
+    }
 }
