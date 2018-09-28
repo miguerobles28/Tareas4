@@ -1,6 +1,6 @@
 #include <iostream>
 char unacadena[] = "Lenguajes de Programacion ITM";
-char otracadena[] = "Lenguajes";
+char otracadena[] = "ITM";
 int buscaString();
 using namespace std;
 
