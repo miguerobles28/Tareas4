@@ -1,7 +1,7 @@
 //Realizar un programa que recorra y verifique si hay una palabra en un arreglo.
 #include <iostream>
 #include <string.h>
-char Cadena[]="Lenguajes de programacion ITM ITM";
+char Cadena[]="Lenguajes de programacITMion ITM";
 char unaCadena[]="ITM";
 int ArreglarCarac(char *BigA, char *SmaA);
 using namespace std;
@@ -26,7 +26,7 @@ int ArreglarCarac(char *BigA, char *SmaA)
            }
        if(cont==strlen(unaCadena))
        {
-            cout<<"Melo"<<"\n";
+            cout<<"melo"<<"\n";
             cont=0;
        }
         cont=0;
